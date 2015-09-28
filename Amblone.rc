@@ -1,0 +1,533 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Neutral) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "Check for updates",           ID_POPUP_CHECKFORUPDATES
+        MENUITEM "Configure Amblone",           ID_CONFIG
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONFIG               "Open the configuration dialog"
+END
+
+#endif    // English (Neutral) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Amblone_DIALOG DIALOGEX 0, 0, 383, 381
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Amblone configuration"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "General",IDC_GROUP_GENERAL,7,7,179,118
+    GROUPBOX        "Algorithm",IDC_GROUP_PERFORMANCE,7,129,179,180
+    GROUPBOX        "Performance",IDC_GROUP_PRIORITY,197,259,179,95
+    GROUPBOX        "RGB channels",IDC_GROUP_RGB_CHANNELS,197,7,179,134
+    GROUPBOX        "Calibration",IDC_GROUP_CALIBRATION,197,146,179,108
+    LTEXT           "Channel 1:",IDC_STATIC_CHANNEL1,217,22,36,8
+    COMBOBOX        IDC_COMBO_CNL1,282,20,82,220,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use channel 2:",IDC_CHECK_CNL2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,206,39,63,10
+    COMBOBOX        IDC_COMBO_CNL2,282,38,82,202,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use channel 3:",IDC_CHECK_CNL3,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,206,57,63,10
+    COMBOBOX        IDC_COMBO_CNL3,282,56,82,184,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use channel 4:",IDC_CHECK_CNL4,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,206,74,63,10
+    COMBOBOX        IDC_COMBO_CNL4,282,73,82,166,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Colour calculation precision:",IDC_STATIC,21,145,90,8
+    LTEXT           "Precise",IDC_STATIC_PRECISE,21,161,24,8
+    CONTROL         "",IDC_SLIDER_PRECISION,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,45,158,100,15
+    LTEXT           "Fast",IDC_STATIC_FAST,148,161,15,8
+    LTEXT           "Colour darkness threshold:",IDC_STATIC,21,183,87,8
+    LTEXT           "None",IDC_STATIC_LOW,21,199,18,8
+    CONTROL         "",IDC_SLIDER_THRESHOLD,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,45,196,100,15
+    LTEXT           "High",IDC_STATIC_HIGH_THRESHOLD,148,199,15,8
+    LTEXT           "Static",IDC_STATIC_LOOPS,31,363,123,8
+    PUSHBUTTON      "OK",IDC_OK,191,360,50,14
+    LTEXT           "Colour accentuation:",IDC_STATIC,21,220,68,8
+    LTEXT           "Off",IDC_STATIC_OFF,21,236,12,8
+    CONTROL         "",IDC_SLIDER_ACCENTUATION,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,45,231,100,15
+    LTEXT           "High",IDC_STATIC_HIGH_ACCENTUATION,148,236,15,8
+    CONTROL         "Flip red and blue values",IDC_CHECK_FLIPRB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,291,91,10
+    CONTROL         "",IDC_SLIDER_RED,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,254,165,100,15
+    CONTROL         "",IDC_SLIDER_GREEN,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,254,187,100,15
+    CONTROL         "",IDC_SLIDER_BLUE,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,254,210,100,15
+    CONTROL         "",IDC_SLIDER_INTENSITY,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,254,232,100,15
+    LTEXT           "Red:",IDC_STATIC_RED,210,169,16,8
+    LTEXT           "Green:",IDC_STATIC_GREEN,210,191,23,8
+    LTEXT           "Blue:",IDC_STATIC_BLUE,210,214,17,8
+    LTEXT           "Brightness:",IDC_STATIC_BRIGHTNESS,210,236,37,8
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,234,287,100,15
+    LTEXT           "Low",IDC_STATIC_LOWPRIO,210,290,14,8
+    LTEXT           "High",IDC_STATIC_HIGHPRIO,337,290,15,8
+    CONTROL         "",IDC_SLIDER_SWEEPSPEED,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,234,114,100,15
+    LTEXT           "Slow",IDC_STATIC_SWEEP_SLOW,210,117,16,8
+    LTEXT           "Fast",IDC_STATIC_SWEEP_FAST,337,117,15,8
+    LTEXT           "Colour sweep speed:",IDC_STATIC_SWEEPSPEED,210,100,68,8
+    CONTROL         "",IDC_SLIDER_LIMIT_LPS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,234,329,100,15
+    LTEXT           "Low",IDC_STATIC_LOWLIMIT,210,332,14,8
+    LTEXT           "High",IDC_STATIC_HIGHLIMIT,337,332,15,8
+    CONTROL         "Limit loops per second (lps)",IDC_CHECK_LIMIT_LPS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,314,136,10
+    LTEXT           "Process priority:",IDC_STATIC_PRIORITY,210,274,53,8
+    LTEXT           "Minimal brightness:",IDC_STATIC_MINBRIGHTNESS,21,256,62,8
+    CONTROL         "",IDC_SLIDER_MINBRIGHTNESS,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,45,268,100,15
+    LTEXT           "None",IDC_STATIC,21,272,18,8
+    LTEXT           "High",IDC_STATIC,148,272,15,8
+    GROUPBOX        "Updates",IDC_STATIC_CONTROL,7,314,179,40
+    CONTROL         "Automatically check for updates",IDC_CHECK_UPDATES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,21,333,118,10
+    COMBOBOX        IDC_COMBO_WINDOW,21,97,153,316,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Capture source:",IDC_STATIC_WINDOW,21,83,53,8
+    COMBOBOX        IDC_COMBO_CAPTURE,21,60,153,316,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Screen capturing method:",IDC_STATIC_CAPTURE,21,46,84,8
+    COMBOBOX        IDC_COMBO_COM,93,23,82,334,CBS_DROPDOWNLIST | CBS_SORT | WS_TABSTOP
+    LTEXT           "Arduino COM Port:",IDC_STATIC_COM,21,22,72,13,SS_CENTERIMAGE
+    PUSHBUTTON      "Captured colours",IDC_BUTTON_SHOWOUTPUT,249,360,69,14
+    PUSHBUTTON      "Hotkeys",IDC_BUTTON_HOTKEYS,326,360,50,14
+    LTEXT           "XBMC IP Address:",IDC_STATIC_XBMC_IP,21,83,58,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_XBMC_IP,82,81,91,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "XBMC Port:",IDC_STATIC_XBMC_PORT,21,104,37,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_XBMC_PORT,82,102,91,14,ES_AUTOHSCROLL | NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Bart van der Drift"
+            VALUE "FileDescription", "Amblone"
+            VALUE "FileVersion", "1, 2, 0, 0"
+            VALUE "InternalName", "Amblone.exe"
+            VALUE "LegalCopyright", "(c) Bart van der Drift.  All rights reserved."
+            VALUE "OriginalFilename", "Amblone.exe"
+            VALUE "ProductName", "Amblone"
+            VALUE "ProductVersion", "1, 2, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_Amblone_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 374
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_Amblone_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_CNL1, 0x403, 14, 0
+0x6e45, 0x6974, 0x6572, 0x7320, 0x7263, 0x6565, 0x006e, 
+    IDC_COMBO_CNL1, 0x403, 11, 0
+0x7055, 0x6570, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL1, 0x403, 11, 0
+0x6f4c, 0x6577, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL1, 0x403, 10, 0
+0x654c, 0x7466, 0x6820, 0x6c61, 0x0066, 
+    IDC_COMBO_CNL1, 0x403, 11, 0
+0x6952, 0x6867, 0x2074, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL1, 0x403, 18, 0
+0x7055, 0x6570, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL1, 0x403, 19, 0
+0x7055, 0x6570, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL1, 0x403, 18, 0
+0x6f4c, 0x6577, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL1, 0x403, 19, 0
+0x6f4c, 0x6577, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL1, 0x403, 14, 0
+0x7453, 0x7461, 0x6369, 0x6320, 0x6c6f, 0x756f, 0x0072, 
+    IDC_COMBO_CNL1, 0x403, 13, 0
+0x6f43, 0x6f6c, 0x7275, 0x7320, 0x6577, 0x7065, "\000" 
+    IDC_COMBO_CNL1, 0x403, 8, 0
+0x6146, 0x656b, 0x5420, 0x0056, 
+    IDC_COMBO_CNL2, 0x403, 14, 0
+0x6e45, 0x6974, 0x6572, 0x7320, 0x7263, 0x6565, 0x006e, 
+    IDC_COMBO_CNL2, 0x403, 11, 0
+0x7055, 0x6570, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL2, 0x403, 11, 0
+0x6f4c, 0x6577, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL2, 0x403, 10, 0
+0x654c, 0x7466, 0x6820, 0x6c61, 0x0066, 
+    IDC_COMBO_CNL2, 0x403, 11, 0
+0x6952, 0x6867, 0x2074, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL2, 0x403, 18, 0
+0x7055, 0x6570, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL2, 0x403, 19, 0
+0x7055, 0x6570, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL2, 0x403, 18, 0
+0x6f4c, 0x6577, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL2, 0x403, 19, 0
+0x6f4c, 0x6577, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL2, 0x403, 14, 0
+0x7453, 0x7461, 0x6369, 0x6320, 0x6c6f, 0x756f, 0x0072, 
+    IDC_COMBO_CNL2, 0x403, 13, 0
+0x6f43, 0x6f6c, 0x7275, 0x7320, 0x6577, 0x7065, "\000" 
+    IDC_COMBO_CNL2, 0x403, 8, 0
+0x6146, 0x656b, 0x5420, 0x0056, 
+    IDC_COMBO_CNL3, 0x403, 14, 0
+0x6e45, 0x6974, 0x6572, 0x7320, 0x7263, 0x6565, 0x006e, 
+    IDC_COMBO_CNL3, 0x403, 11, 0
+0x7055, 0x6570, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL3, 0x403, 11, 0
+0x6f4c, 0x6577, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL3, 0x403, 10, 0
+0x654c, 0x7466, 0x6820, 0x6c61, 0x0066, 
+    IDC_COMBO_CNL3, 0x403, 11, 0
+0x6952, 0x6867, 0x2074, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL3, 0x403, 18, 0
+0x7055, 0x6570, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL3, 0x403, 19, 0
+0x7055, 0x6570, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL3, 0x403, 18, 0
+0x6f4c, 0x6577, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL3, 0x403, 19, 0
+0x6f4c, 0x6577, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL3, 0x403, 14, 0
+0x7453, 0x7461, 0x6369, 0x6320, 0x6c6f, 0x756f, 0x0072, 
+    IDC_COMBO_CNL3, 0x403, 13, 0
+0x6f43, 0x6f6c, 0x7275, 0x7320, 0x6577, 0x7065, "\000" 
+    IDC_COMBO_CNL3, 0x403, 8, 0
+0x6146, 0x656b, 0x5420, 0x0056, 
+    IDC_COMBO_CNL4, 0x403, 14, 0
+0x6e45, 0x6974, 0x6572, 0x7320, 0x7263, 0x6565, 0x006e, 
+    IDC_COMBO_CNL4, 0x403, 11, 0
+0x7055, 0x6570, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL4, 0x403, 11, 0
+0x6f4c, 0x6577, 0x2072, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL4, 0x403, 10, 0
+0x654c, 0x7466, 0x6820, 0x6c61, 0x0066, 
+    IDC_COMBO_CNL4, 0x403, 11, 0
+0x6952, 0x6867, 0x2074, 0x6168, 0x666c, "\000" 
+    IDC_COMBO_CNL4, 0x403, 18, 0
+0x7055, 0x6570, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL4, 0x403, 19, 0
+0x7055, 0x6570, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL4, 0x403, 18, 0
+0x6f4c, 0x6577, 0x2072, 0x656c, 0x7466, 0x6320, 0x726f, 0x656e, 0x0072, 
+
+    IDC_COMBO_CNL4, 0x403, 19, 0
+0x6f4c, 0x6577, 0x2072, 0x6972, 0x6867, 0x2074, 0x6f63, 0x6e72, 0x7265, 
+"\000" 
+    IDC_COMBO_CNL4, 0x403, 14, 0
+0x7453, 0x7461, 0x6369, 0x6320, 0x6c6f, 0x756f, 0x0072, 
+    IDC_COMBO_CNL4, 0x403, 13, 0
+0x6f43, 0x6f6c, 0x7275, 0x7320, 0x6577, 0x7065, "\000" 
+    IDC_COMBO_CNL4, 0x403, 8, 0
+0x6146, 0x656b, 0x5420, 0x0056, 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_COLOURS DIALOGEX 65436, 65511, 368, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Captured colours"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         155,IDC_STATIC_PIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,68,50,231,143,WS_EX_TRANSPARENT
+END
+
+IDD_DIALOG_HOTKEYS DIALOGEX 0, 0, 220, 206
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Configure hotkeys"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,163,185,50,14
+    LTEXT           "Select display device 1:",IDC_STATIC,7,9,76,8
+    LTEXT           "Select display device 2:",IDC_STATIC,7,29,76,8
+    COMBOBOX        IDC_COMBO_MOD_DISP1,93,7,82,334,CBS_DROPDOWNLIST | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_MOD_DISP2,93,27,82,334,CBS_DROPDOWNLIST | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_KEY_DISP1,187,7,26,14,ES_AUTOHSCROLL | ES_NOHIDESEL
+    EDITTEXT        IDC_EDIT_KEY_DISP2,187,27,26,14,ES_AUTOHSCROLL
+    LTEXT           "Static colour:",IDC_STATIC,7,49,43,8
+    COMBOBOX        IDC_COMBO_MOD_STATIC_COLOUR,93,47,82,334,CBS_DROPDOWNLIST | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_KEY_STATIC_COLOUR,187,47,26,14,ES_AUTOHSCROLL
+    LTEXT           "Colour sweep:",IDC_STATIC,7,68,47,8
+    COMBOBOX        IDC_COMBO_MOD_SWEEP,93,66,82,334,CBS_DROPDOWNLIST | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_KEY_SWEEP,187,66,26,14,ES_AUTOHSCROLL
+    LTEXT           "Fake TV:",IDC_STATIC,7,88,29,8
+    COMBOBOX        IDC_COMBO_MOD_FAKE_TV,93,86,82,334,CBS_DROPDOWNLIST | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_KEY_FAKE_TV,187,86,26,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_COLOURS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_DIALOG_HOTKEYS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG_HOTKEYS DLGINIT
+BEGIN
+    IDC_COMBO_MOD_DISP1, 0x403, 13, 0
+0x7443, 0x6c72, 0x2b20, 0x5320, 0x6968, 0x7466, "\000" 
+    IDC_COMBO_MOD_DISP1, 0x403, 11, 0
+0x7443, 0x6c72, 0x2b20, 0x4120, 0x746c, "\000" 
+    IDC_COMBO_MOD_DISP1, 0x403, 12, 0
+0x6c41, 0x2074, 0x202b, 0x6853, 0x6669, 0x0074, 
+    IDC_COMBO_MOD_DISP2, 0x403, 13, 0
+0x7443, 0x6c72, 0x2b20, 0x5320, 0x6968, 0x7466, "\000" 
+    IDC_COMBO_MOD_DISP2, 0x403, 11, 0
+0x7443, 0x6c72, 0x2b20, 0x4120, 0x746c, "\000" 
+    IDC_COMBO_MOD_DISP2, 0x403, 12, 0
+0x6c41, 0x2074, 0x202b, 0x6853, 0x6669, 0x0074, 
+    IDC_COMBO_MOD_STATIC_COLOUR, 0x403, 13, 0
+0x7443, 0x6c72, 0x2b20, 0x5320, 0x6968, 0x7466, "\000" 
+    IDC_COMBO_MOD_STATIC_COLOUR, 0x403, 11, 0
+0x7443, 0x6c72, 0x2b20, 0x4120, 0x746c, "\000" 
+    IDC_COMBO_MOD_STATIC_COLOUR, 0x403, 12, 0
+0x6c41, 0x2074, 0x202b, 0x6853, 0x6669, 0x0074, 
+    IDC_COMBO_MOD_SWEEP, 0x403, 13, 0
+0x7443, 0x6c72, 0x2b20, 0x5320, 0x6968, 0x7466, "\000" 
+    IDC_COMBO_MOD_SWEEP, 0x403, 11, 0
+0x7443, 0x6c72, 0x2b20, 0x4120, 0x746c, "\000" 
+    IDC_COMBO_MOD_SWEEP, 0x403, 12, 0
+0x6c41, 0x2074, 0x202b, 0x6853, 0x6669, 0x0074, 
+    IDC_COMBO_MOD_FAKE_TV, 0x403, 13, 0
+0x7443, 0x6c72, 0x2b20, 0x5320, 0x6968, 0x7466, "\000" 
+    IDC_COMBO_MOD_FAKE_TV, 0x403, 11, 0
+0x7443, 0x6c72, 0x2b20, 0x4120, 0x746c, "\000" 
+    IDC_COMBO_MOD_FAKE_TV, 0x403, 12, 0
+0x6c41, 0x2074, 0x202b, 0x6853, 0x6669, 0x0074, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Amblone.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\amblone.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP                  "res\\icon16.bmp"
+IDB_BITMAP3             BITMAP                  "res\\icon32.bmp"
+IDB_BITMAP4             BITMAP                  "res\\icon48.bmp"
+IDB_BITMAP_TV           BITMAP                  "tvscreen.bmp"
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Amblone.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
